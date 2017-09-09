@@ -1,6 +1,7 @@
 import React from "react";
 
-import Split from "grommet/components/Split";
+import SocialShare from "grommet/components/SocialShare";
+import Menu from "grommet/components/Menu";
 import Markdown from "grommet/components/Markdown";
 import Header from "grommet/components/Header";
 import Video from "grommet/components/Video";
@@ -383,8 +384,27 @@ export default class Drip extends React.PureComponent {
   render() {
     return (
       <Article full={true} pad="none">
-        <Header pad="medium">
+        <Header pad="medium" fixed={true}>
           <Title>Weekly Drip 021.5</Title>
+          <Box flex={true} justify="end" direction="row" responsive="false">
+            <Menu inline={false}>
+              <SocialShare
+                text="Check out today's free video on DailyDrip!"
+                link="http://www.dailydrip.com"
+                type="twitter"
+              />
+              <SocialShare
+                text="Check out today's free video on DailyDrip!"
+                link="http://www.dailydrip.com"
+                type="facebook"
+              />
+              <SocialShare
+                text="Check out today's free video on DailyDrip!"
+                link="http://www.dailydrip.com"
+                type="email"
+              />
+            </Menu>
+          </Box>
         </Header>
         <Section pad="none">
           <Video
@@ -394,6 +414,7 @@ export default class Drip extends React.PureComponent {
             title="Weekly Drip 025.1"
           />
         </Section>
+        <Section pad="medium" />
         <Section pad="medium">
           <Markdown content={content} />
         </Section>
