@@ -7,7 +7,6 @@ import Video from "grommet/components/Video";
 import Box from "grommet/components/Box";
 import Title from "grommet/components/Title";
 import Sidebar from "grommet/components/Sidebar";
-import LoginForm from "grommet/components/LoginForm";
 import Article from "grommet/components/Article";
 import Section from "grommet/components/Section";
 import Heading from "grommet/components/Heading";
@@ -380,7 +379,7 @@ end
 \`\`\`
 `;
 
-export default class Login extends React.PureComponent {
+export default class Drip extends React.PureComponent {
   render() {
     return (
       <Article full={true} pad="none">
