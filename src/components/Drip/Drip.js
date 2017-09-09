@@ -383,6 +383,9 @@ export default class Drip extends React.PureComponent {
   render() {
     return (
       <Article full={true} pad="none">
+        <Header pad="medium">
+          <Title>Weekly Drip 021.5</Title>
+        </Header>
         <Section pad="none">
           <Video
             src="https://d25pnt1rrtzbdm.cloudfront.net/uploads/drip/video/971/025.1_Weekly_Drip_Optimized.mp4"
@@ -391,14 +394,9 @@ export default class Drip extends React.PureComponent {
             title="Weekly Drip 025.1"
           />
         </Section>
-        <Box pad="medium">
-          <Header>
-            <Title>Weekly Drip 021.5</Title>
-          </Header>
-          <Section full={true} pad="none">
-            <Markdown content={content} />
-          </Section>
-        </Box>
+        <Section pad="medium">
+          <Markdown content={content} />
+        </Section>
       </Article>
     );
   }
