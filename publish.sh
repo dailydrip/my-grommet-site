@@ -1,4 +1,4 @@
 #!/bin/sh
 
 gatsby build &&
-surge public/ pwa.dailydrip.com
+surge public/ -d pwa.dailydrip.com
