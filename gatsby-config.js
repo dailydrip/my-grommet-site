@@ -6,6 +6,8 @@ module.exports = {
   },
   pathPrefix: "/gatsby-starter-grommet",
   plugins: [
+    "gatsby-plugin-manifest",
+    "gatsby-plugin-offline",
     {
       resolve: "custom-sass-loader",
       options: {

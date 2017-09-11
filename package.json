@@ -19,6 +19,8 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "gatsby": "^1.9.26",
     "gatsby-link": "^1.3.2",
+    "gatsby-plugin-manifest": "^1.0.7",
+    "gatsby-plugin-offline": "^1.0.9",
     "grommet": "^1.5.0",
     "node-sass": "^4.5.2",
     "prop-types": "^15.5.10",
