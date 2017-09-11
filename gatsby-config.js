@@ -2,7 +2,7 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = {
   siteMetadata: {
-    title: "Gromsby Demo"
+    title: "DailyDrip"
   },
   pathPrefix: "/gatsby-starter-grommet",
   plugins: [
@@ -43,6 +43,7 @@ module.exports = {
           })
         ]
       }
-    }
+    },
+    "gatsby-plugin-react-helmet"
   ]
 };

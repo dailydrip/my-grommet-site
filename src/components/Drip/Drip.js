@@ -386,7 +386,7 @@ export default class Drip extends React.PureComponent {
       <Article full={true} pad="none">
         <Header pad="medium" fixed={true}>
           <Title>Weekly Drip 021.5</Title>
-          <Box flex={true} justify="end" direction="row" responsive="false">
+          <Box flex={true} justify="end" direction="row" responsive={false}>
             <Menu inline={false}>
               <SocialShare
                 text="Check out today's free video on DailyDrip!"
