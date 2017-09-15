@@ -11,24 +11,25 @@ module.exports = {
       options: {
         name: "DailyDrip PWA",
         short_name: "DailyDrip",
-        start_url: "/",
-        background_color: "#f7f0eb",
-        theme_color: "#a2466c",
-        display: "minimal-ui",
+        start_url: "/?utm_source=homescreen",
+        background_color: "#4A90E2",
+        theme_color: "#4A90E2",
+        display: "standalone",
         icons: [
           {
-            // Everything in /static will be copied to an equivalent
-            // directory in /public during development and build, so
-            // assuming your favicons are in /static/favicons,
-            // you can reference them here
-            src: `/favicons/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`
+            src: "favicons/android-chrome-144x144.png",
+            sizes: "144x144",
+            type: "image/png"
           },
           {
-            src: `/favicons/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`
+            src: "favicons/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "favicons/android-chrome-512x512.png",
+            sizes: "512x512",
+            type: "image/png"
           }
         ]
       }
@@ -38,8 +39,9 @@ module.exports = {
       options: {
         runtimeCaching: [
           // these assets, let's cache them aggressively
-          // We probably want these to check the network first but this works
+          // We probably want these to check network first but this works
           // and at least shows some differences
+          //
           {
             urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|mp4)$/,
             handler: `cacheFirst`
@@ -49,7 +51,7 @@ module.exports = {
             urlPattern: /\.(?:js|css)$/,
             handler: `networkFirst`
           },
-          // our API should always be checked for the latest episode
+          //our API should always be checked for the latest episode
           {
             urlPattern: /dailydrip/,
             handler: `networkFirst`
