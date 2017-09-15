@@ -33,7 +33,30 @@ module.exports = {
         ]
       }
     },
-    { resolve: "gatsby-plugin-offline" },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        runtimeCaching: [
+          // these assets, let's cache them aggressively
+          // We probably want these to check the network first but this works
+          // and at least shows some differences
+          {
+            urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|mp4)$/,
+            handler: `cacheFirst`
+          },
+          // Our js and css, we'd like to change them
+          {
+            urlPattern: /\.(?:js|css)$/,
+            handler: `networkFirst`
+          },
+          // our API should always be checked for the latest episode
+          {
+            urlPattern: /dailydrip/,
+            handler: `networkFirst`
+          }
+        ]
+      }
+    },
     {
       resolve: "custom-sass-loader",
       options: {
